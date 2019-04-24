@@ -5,7 +5,7 @@ const flipButton = document.getElementById("flip-button");
 const coinImage = document.getElementById("coin-img");
 const winsDisplay = document.getElementById("win");
 const lossesDisplay = document.getElementById("losses");
-const ourChoice = document.getElementById("heads-choice");
+const headsChoice = document.getElementById("heads-choice");
 
 // initialize some stuff
 let winCount = 0;
@@ -15,7 +15,16 @@ let lossesCount = 0;
 flipButton.addEventListener('click', () => {
     const randomNumber = Math.random();
     const flip = coinTossFunction(randomNumber);
-    console.log("banana");
+
+    coinImage.src = "./assets/" + flip + ".png";
+
+    let guess = '';
+    if (headsChoice.checked) {
+        guess = "heads";
+    } else {
+        guess = "tails";
+    }
+
 });
 
 //changee image display
