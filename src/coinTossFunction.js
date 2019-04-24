@@ -1,7 +1,7 @@
 function coinTossFunction(number) {
     if(number < .5){
-        return "heads";
+        return 'heads';
     }
-    return "tails";
+    return 'tails';
 }
 export default coinTossFunction;

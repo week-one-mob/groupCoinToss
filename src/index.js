@@ -1,12 +1,12 @@
 // import our function
-import coinTossFunction from "./coinTossFunction.js"
+import coinTossFunction from './coinTossFunction.js'
 //reference our DOM elements
-const flipButton = document.getElementById("flip-button");
-const coinImage = document.getElementById("coin-img");
-const winsDisplay = document.getElementById("win");
-const lossesDisplay = document.getElementById("losses");
-const headsChoice = document.getElementById("heads-choice");
-let resultMessage = document.getElementById("result-message");
+const flipButton = document.getElementById('flip-button');
+const coinImage = document.getElementById('coin-img');
+const winsDisplay = document.getElementById('win');
+const lossesDisplay = document.getElementById('losses');
+const headsChoice = document.getElementById('heads-choice');
+let resultMessage = document.getElementById('result-message');
 
 // initialize some stuff
 let winsCount = 0;
@@ -17,33 +17,33 @@ flipButton.addEventListener('click', () => {
     const randomNumber = Math.random();
     const flip = coinTossFunction(randomNumber);
 
-    coinImage.src = "./assets/" + flip + ".png";
+    coinImage.src = './assets/' + flip + '.png';
 
     let guess = '';
     if (headsChoice.checked) {
-        guess = "heads";
+        guess = 'heads';
     } else {
-        guess = "tails";
+        guess = 'tails';
     }
 
     const guessedCorrect = flip === guess;
 
     if(guessedCorrect){
-        resultMessage.textContent = "You won!";
-        resultMessage.classList.remove("lose");
-        resultMessage.classList.add("win");
+        resultMessage.textContent = 'npmYou won!';
+        resultMessage.classList.remove('lose');
+        resultMessage.classList.add('win');
     } else {
-        resultMessage.textContent = "You lose!";
-        resultMessage.classList.remove("win");
-        resultMessage.classList.add("lose");
+        resultMessage.textContent = 'You lose!';
+        resultMessage.classList.remove('win');
+        resultMessage.classList.add('lose');
     }
 
     if(guessedCorrect) {
         winsCount++;
-        winsDisplay.textContent = "Wins: " + winsCount;
+        winsDisplay.textContent = 'Wins: ' + winsCount;
     } else {
         lossesCount++;
-        lossesDisplay.textContent = "Losses: " + lossesCount;
+        lossesDisplay.textContent = 'Losses: ' + lossesCount;
     }
     
 });
