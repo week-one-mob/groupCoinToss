@@ -6,9 +6,10 @@ const coinImage = document.getElementById("coin-img");
 const winsDisplay = document.getElementById("win");
 const lossesDisplay = document.getElementById("losses");
 const headsChoice = document.getElementById("heads-choice");
+let resultMessage = document.getElementById("result-message");
 
 // initialize some stuff
-let winCount = 0;
+let winsCount = 0;
 let lossesCount = 0;
 
 // add event listener
@@ -25,6 +26,26 @@ flipButton.addEventListener('click', () => {
         guess = "tails";
     }
 
+    const guessedCorrect = flip === guess;
+
+    if(guessedCorrect){
+        resultMessage.textContent = "You won!";
+        resultMessage.classList.remove("lose");
+        resultMessage.classList.add("win");
+    } else {
+        resultMessage.textContent = "You lose!";
+        resultMessage.classList.remove("win");
+        resultMessage.classList.add("lose");
+    }
+
+    if(guessedCorrect) {
+        winsCount++;
+        winsDisplay.textContent = "Wins: " + winsCount;
+    } else {
+        lossesCount++;
+        lossesDisplay.textContent = "Losses: " + lossesCount;
+    }
+    
 });
 
 //changee image display
