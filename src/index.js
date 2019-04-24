@@ -1,5 +1,5 @@
 // import our function
-import coinTossFunction from './coinTossFunction.js'
+import coinTossFunction from './coinTossFunction.js';
 //reference our DOM elements
 const flipButton = document.getElementById('flip-button');
 const coinImage = document.getElementById('coin-img');
@@ -20,7 +20,7 @@ flipButton.addEventListener('click', () => {
     coinImage.src = './assets/' + flip + '.png';
 
     let guess = '';
-    if (headsChoice.checked) {
+    if(headsChoice.checked) {
         guess = 'heads';
     } else {
         guess = 'tails';

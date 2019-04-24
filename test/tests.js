@@ -3,7 +3,7 @@ const test = QUnit.test;
 
 test('get heads for less then .5', function(assert) {
     const number = .49;
-    const expected = "heads";
+    const expected = 'heads';
 
     const result = coinTossFunction(number);
 
@@ -12,7 +12,7 @@ test('get heads for less then .5', function(assert) {
 
 test('get tails for greater then or equal then 5', function(assert) {
     const number = .5;
-    const expected = "tails";
+    const expected = 'tails';
 
     const result = coinTossFunction(number);
   
