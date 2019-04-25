@@ -1,4 +1,4 @@
-// import our function
+//import our function
 import coinTossFunction from './coinTossFunction.js';
 //reference our DOM elements
 const flipButton = document.getElementById('flip-button');
@@ -8,11 +8,11 @@ const lossesDisplay = document.getElementById('losses');
 const headsChoice = document.getElementById('heads-choice');
 let resultMessage = document.getElementById('result-message');
 
-// initialize some stuff
+//initialize some stuff
 let winsCount = 0;
 let lossesCount = 0;
 
-// add event listener
+//add event listener
 flipButton.addEventListener('click', () => {
     const randomNumber = Math.random();
     const flip = coinTossFunction(randomNumber);
@@ -47,9 +47,3 @@ flipButton.addEventListener('click', () => {
     }
     
 });
-
-//changee image display
-
-//show message
-
-//increment wins/losses
