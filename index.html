@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/main.css">
+    <title>Coin Toss</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to our Coin Toss Game!</h1>
+    </header>
+    <main>
+        <p>
+            <img id="coin-img" src="assets/heads.png">
+        </p>
+        <p class="results">
+            <span id="win">Wins: 0</span>
+            <span id="losses">Losses: 0</span>
+        </p>
+        <p>
+            <label>
+                <input id="heads-choice" type ="radio" name="coin-side" checked> Heads
+            </label>
+        </p>
+        <p>
+            <label>
+                <input type ="radio" name="coin-side"> Tails
+            </label>
+        </p>
+        <p>
+            <button id="flip-button">Flip IT!!!</button>    
+        </p>
+        <p id= "message">
+            Flip our MAGIC coin!
+        </p>
+        <p id="result-message"></p>
+    </main>
+    <script type="module" src="./src/index.js"></script>
+</body>
+</html>
